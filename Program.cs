@@ -1,7 +1,9 @@
 ﻿Console.Write("--- NomeNinja --- :  ");
-Console.WriteLine(
-    Console.ReadLine()
 
+Console.Write("Digite seu nome: ");
+string nome = Console.ReadLine()!;
+
+string nomeNinja = nome.Trim().ToLower()
 .Replace("a", "KA")
 .Replace("b", "ZU")
 .Replace("c", "MI")
@@ -27,8 +29,13 @@ Console.WriteLine(
 .Replace("w", "MEI")
 .Replace("x", "NA")
 .Replace("y", "FU")
-.Replace("z", "ZI")
-); 
+.Replace("z", "ZI");
+
+nomeNinja = $"{nomeNinja.Substring(0, 1).ToUpper()}{nomeNinja.Substring(1).ToLower()}";
+
+Console.WriteLine($"\nSeu nome ninja é {nomeNinja}.");
+
+
 
 
 
